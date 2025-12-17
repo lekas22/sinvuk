@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SINVUK CAR WASH | Autoperionica Beograd</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="lang-switch">
+  <button onclick="setLang('sr')">SR</button>
+  <button onclick="setLang('en')">EN</button>
+</div>
+
+<header class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1 data-sr="Premium autoperionica u srcu Beograda" data-en="Premium Car Wash in the Heart of Belgrade"></h1>
+    <p data-sr="12 godina profesionalne brige o vašem automobilu" data-en="12 years of professional car care"></p>
+    <div class="cta-buttons">
+      <a href="tel:+38160000000" class="btn" data-sr="Pozovite odmah" data-en="Call Now"></a>
+      <a href="https://maps.google.com/?q=Bulevar+kralja+Aleksandra+84+Beograd" target="_blank" class="btn" data-sr="Kako do nas" data-en="Get Directions"></a>
+    </div>
+  </div>
+</header>
+
+<section class="about">
+  <h2 data-sr="O nama" data-en="About Us"></h2>
+  <p data-sr="Autoperionica Sinvuk već 12 godina uspešno brine o čistoći svih tipova putničkih automobila, kombija i lakih dostavnih vozila. Nalazimo se na atraktivnoj lokaciji na Vračaru i nudimo brzu, profesionalnu i pouzdanu uslugu."
+     data-en="Sinvuk Car Wash has been providing professional cleaning services for passenger cars, vans, and light commercial vehicles for over 12 years. Located in the Vračar area of Belgrade, we are known for fast and reliable service."></p>
+</section>
+
+<section class="services">
+  <h2 data-sr="Usluge" data-en="Services"></h2>
+  <div class="cards">
+    <div class="card" data-sr="Spoljašnje i unutrašnje pranje" data-en="Exterior & Interior Car Wash"></div>
+    <div class="card" data-sr="Dubinsko čišćenje enterijera" data-en="Deep Interior Cleaning"></div>
+    <div class="card" data-sr="Poliranje automobila" data-en="Car Polishing"></div>
+    <div class="card" data-sr="Poliranje farova" data-en="Headlight Polishing"></div>
+    <div class="card" data-sr="Voskiranje i zaštita laka" data-en="Waxing & Paint Protection"></div>
+  </div>
+</section>
+
+<section class="clients">
+  <h2 data-sr="Poslovni klijenti" data-en="Corporate Clients"></h2>
+  <p data-sr="Posebne pogodnosti za firme i vozne parkove. Sarađujemo sa: Hemofarm, Telekom, Svetska banka i Udruženje banaka Srbije."
+     data-en="Special conditions for corporate fleets. Trusted by Hemofarm, Telekom, World Bank, and the Association of Serbian Banks."></p>
+</section>
+
+<footer>
+  <p data-sr="Autoperionica Sinvuk, Bulevar kralja Aleksandra 84, Vračar, Beograd"
+     data-en="Sinvuk Car Wash, Bulevar Kralja Aleksandra 84, Vračar, Belgrade"></p>
+  <p data-sr="Ponedeljak – Subota: 08–21h | Nedelja: 10–18h"
+     data-en="Monday – Saturday: 08–21h | Sunday: 10–18h"></p>
+</footer>
+
+<script>
+  function setLang(lang){
+    document.querySelectorAll('[data-sr]').forEach(el=>{
+      el.innerText = el.getAttribute('data-'+lang);
+    });
+    document.documentElement.lang = lang;
+  }
+  setLang('sr');
+</script>
+
+</body>
+</html>
